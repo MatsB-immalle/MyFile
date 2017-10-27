@@ -18,22 +18,22 @@ namespace MyFile
                 switch (args[0])
                 {
                     case "-f":
-                        Console.WriteLine("dirrectory f");
+                        ShowAllFilesInCurrentDirectory();
                         break;
 
                     case "-h":
-                        Console.WriteLine("-c=huidige directory");
+                        Console.WriteLine("-c = huidige directory");
                         Console.WriteLine("-f = alle files huidige directory, ");
-                        Console.WriteLine("-d= alle subdirectories in de huidige directory");                                                
+                        Console.WriteLine("-d = alle subdirectories in de huidige directory");                                                
                         break;
 
                     case "-d":
-                        Console.WriteLine("dirrectory d");
+                        AllSubDirectorysInCurrentDirectory();
                         break;
 
 
                     case "-c":
-                        Console.WriteLine("dirrectory c");
+                        CurrentDirectory();
                         break;
 
                     default:
@@ -43,6 +43,23 @@ namespace MyFile
                 }
                
             }
+        }
+
+        private static void CurrentDirectory()
+        {
+            Console.WriteLine("directory " + Environment.CurrentDirectory);
+           
+
+        }
+
+        private static void AllSubDirectorysInCurrentDirectory()
+        {
+            Console.WriteLine("directory d");
+        }
+
+        private static void ShowAllFilesInCurrentDirectory()
+        {
+            Console.WriteLine("alle files in huidige directory");
         }
     }
 }
