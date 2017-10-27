@@ -18,9 +18,10 @@ namespace MyFile
                 switch (args[0])
                 {
                     case "-f":
-
+                        Console.WriteLine("dirrectory f");
                         break;
                     case "-c":
+                        Console.WriteLine("dirrectory c");
                         break;
                     default:
                         Console.WriteLine("probeer eens -c of -f");
