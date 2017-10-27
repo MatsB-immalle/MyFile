@@ -20,11 +20,24 @@ namespace MyFile
                     case "-f":
                         Console.WriteLine("dirrectory f");
                         break;
+
+                    case "-h":
+                        Console.WriteLine("-c=huidige directory");
+                        Console.WriteLine("-f = alle files huidige directory, ");
+                        Console.WriteLine("-d= alle subdirectories in de huidige directory");                                                
+                        break;
+
+                    case "-d":
+                        Console.WriteLine("dirrectory d");
+                        break;
+
+
                     case "-c":
                         Console.WriteLine("dirrectory c");
                         break;
+
                     default:
-                        Console.WriteLine("probeer eens -c of -f");
+                        Console.WriteLine("onbekend argument");
                         break;
 
                 }
