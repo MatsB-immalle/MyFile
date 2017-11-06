@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
+// niet vergeten using System.IO !!!
 
 namespace MyFile
 {
@@ -48,18 +50,31 @@ namespace MyFile
         private static void CurrentDirectory()
         {
             Console.WriteLine("directory " + Environment.CurrentDirectory);
-           
+            
+
 
         }
 
         private static void AllSubDirectorysInCurrentDirectory()
         {
-            Console.WriteLine("directory d");
+            Console.WriteLine("directory");
+
+            string[] dirs = Directory.GetDirectories(Environment.CurrentDirectory);
+            foreach (string dir in dirs)
+            {
+                Console.WriteLine(Path.GetFileName(dir));
+            }
         }
 
         private static void ShowAllFilesInCurrentDirectory()
         {
             Console.WriteLine("alle files in huidige directory");
+
+            string[] dirs = Directory.GetFiles(Environment.CurrentDirectory);
+            foreach (string dir in dirs)
+            {
+                Console.WriteLine(Path.GetFileName(dir));
+            }
         }
     }
 }
