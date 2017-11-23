@@ -13,7 +13,8 @@ namespace MyFile
         {
             if( args.Length == 0)
             {
-                Console.WriteLine("geef een argument");
+                Console.WriteLine("geef een argument" +
+                    "-h = help");
             }
             else
             {
